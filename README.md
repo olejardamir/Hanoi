@@ -70,6 +70,32 @@ Result will be:
 }
 ```
 
+curl -X POST http://localhost:8080/playGame/0/1/
+```JSON
+{
+  "message": "VICTORY!",
+  "currentState": {
+    "rods": [
+      {
+        "totalPegs": 1,
+        "rodNumber": 0,
+        "stack": [],
+        "finalRod": false
+      },
+      {
+        "totalPegs": 1,
+        "rodNumber": 1,
+        "stack": [
+          0
+        ],
+        "finalRod": true
+      }
+    ],
+    "finalRod": 0
+  }
+}
+```
+
 ## Engine design
 ### Logic
 Although we were told that the game engine should support 4 pegs, it does not say that it should not support any other number of rods or pegs. Therefore, the universal Henoi tower engine was made. Having the universal engine implies several constraints. 

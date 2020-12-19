@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HanoiREST_Engine (1)" />
-        <module name="HanoiREST_Engine (2)" />
+        <module name="HanoiREST_Engine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="HanoiREST_Engine (1)" target="1.8" />
+      <module name="HanoiREST_Engine" target="1.8" />
+      <module name="HanoiREST_Engine (1)" target="1.5" />
       <module name="HanoiREST_Engine (2)" target="1.5" />
     </bytecodeTargetLevel>
   </component>

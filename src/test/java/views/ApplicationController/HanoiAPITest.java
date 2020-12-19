@@ -8,17 +8,25 @@ import org.junit.Test;
 
 import java.util.Random;
 
+/**
+ * Tests the REST call to API
+ */
 public class HanoiAPITest extends NinjaTest
 {
 
     private Gson gson = new Gson();
 
+    /**
+     * Initial setup
+     */
     @Before
     public void setup() {
         ninjaTestBrowser.makeRequest(getServerAddress() + "setup");
     }
 
-
+    /**
+     * Tests the tower initialization, with all possible errors
+     */
     @Test
     public void testTowerInit() {
         String answer = ninjaTestBrowser.postJson(getServerAddress() + "/newGame/0/0/",null);
@@ -38,6 +46,9 @@ public class HanoiAPITest extends NinjaTest
         assert (answerModel.getMessage().equals("New game started"));
     }
 
+    /**
+     * Tests the victory scenario
+     */
     @Test
     public void testEasyVictory() {
         String answer = ninjaTestBrowser.postJson(getServerAddress() + "/newGame/1/2/",null);
@@ -53,6 +64,9 @@ public class HanoiAPITest extends NinjaTest
         assert (answerModel.getMessage().equals("You already won, please start a new game"));
     }
 
+    /**
+     * Tests possible illegal moves
+     */
     @Test
     public void testIllegalMoves() {
         String answer = ninjaTestBrowser.postJson(getServerAddress() + "/newGame/4/3/",null);
@@ -72,7 +86,9 @@ public class HanoiAPITest extends NinjaTest
 
     }
 
-
+    /**
+     * Randomly gets to victory, may take a few seconds
+     */
     @Test
     public void testRandomVictory() {
         String answer = ninjaTestBrowser.postJson(getServerAddress() + "/newGame/4/3/",null);

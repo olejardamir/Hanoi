@@ -2,6 +2,11 @@ package models;
 
 import java.util.Stack;
 
+/**
+ * The model of a rod with pegs on it.
+ * Is marked by a serial number, whether it is a final rod, and total pegs in the game
+ * Has a stack of pegs
+ */
 public class RodModel {
 
     private int totalPegs;

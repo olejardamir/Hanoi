@@ -8,6 +8,9 @@ import ninja.Results;
 import ninja.params.PathParam;
 import service.TowersService;
 
+/**
+ * The Hanoi Towers Controller
+ */
 @Singleton
  public class HanoiController {
 
@@ -17,6 +20,12 @@ import service.TowersService;
     @Inject
     AnswerModel answerModel;
 
+    /**
+     * Initiates a new game for the player
+     * @param rods the number of rods we want to play with
+     * @param pegs the number of pegs (or discs) we want to play with
+     * @return the JSON representation of the AnswerModel
+     */
     public Result newGame(@PathParam("rods") int rods,
                           @PathParam("pegs") int pegs) {
         try {
@@ -33,6 +42,12 @@ import service.TowersService;
         }
     }
 
+    /**
+     * Allows the player to make the next move
+     * @param from the number of a rod to play from
+     * @param to the number of a rod to play to
+     * @return the JSON representation of the AnswerModel
+     */
     public Result playGame(@PathParam("from") int from,
                            @PathParam("to") int to) {
         try {

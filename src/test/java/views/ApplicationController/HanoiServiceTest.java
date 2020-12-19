@@ -7,10 +7,16 @@ import service.TowersService;
 
 import java.util.Random;
 
+/**
+ * Tests the Service components
+ */
 public class HanoiServiceTest {
 
     private Gson gson = new Gson();
 
+    /**
+     * Tests the tower initialization, with all possible errors
+     */
     @Test
     public void testTowerInit() {
         TowersService towersLogic = new TowersService();
@@ -27,6 +33,9 @@ public class HanoiServiceTest {
         assert (answerModel.getMessage().equals("New game started"));
     }
 
+    /**
+     * Tests the victory scenario
+     */
     @Test
     public void testEasyVictory() {
         TowersService towersLogic = new TowersService();
@@ -41,6 +50,9 @@ public class HanoiServiceTest {
         assert (answerModel.getMessage().equals("You already won, please start a new game"));
     }
 
+    /**
+     * Tests possible illegal moves
+     */
     @Test
     public void testIllegalMoves() {
         TowersService towersLogic = new TowersService();
@@ -58,6 +70,9 @@ public class HanoiServiceTest {
 
     }
 
+    /**
+     * Randomly gets to victory, may take a few seconds
+     */
     @Test
     public void testRandomVictory() {
         TowersService towersLogic = new TowersService();

@@ -3,6 +3,10 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A model of all rods with all pegs, marked by the final rod number.
+ * Has the list of rods for the game.
+ */
 public class TowersModel {
 
     private List<RodModel> rods = new ArrayList<>();

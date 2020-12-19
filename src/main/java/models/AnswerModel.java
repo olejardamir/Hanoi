@@ -1,5 +1,8 @@
 package models;
 
+/**
+ * The model of the JSON return, has a message and a TowersModel state
+ */
 public class AnswerModel {
     private String message;
     private TowersModel currentState;

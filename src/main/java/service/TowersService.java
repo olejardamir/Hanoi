@@ -6,12 +6,21 @@ import models.TowersModel;
 
 import java.util.Stack;
 
+/**
+ * The main logical component of the whole game
+ */
 public class TowersService {
     private RodService rodService;
     private TowersModel towersModel;
     private int finalRod;
     private boolean victory;
 
+    /**
+     * Initiates the new game.
+     * @param pegs the number of pegs/discs we want to use
+     * @param rods the number of rods we want to use
+     * @return the AnswerModel telling us the current state of the game
+     */
     public AnswerModel newGame(int pegs, int rods) {
         if (pegs == 0) {
             return generateAnswer("Number of pegs must be greater than 0");
@@ -34,10 +43,20 @@ public class TowersService {
         return generateAnswer("New game started");
     }
 
+    /**
+     * Getter for TowersModel
+     * @return TowersModel, the POJO with all rods and discs
+     */
     public TowersModel getTowersModel() {
         return towersModel;
     }
 
+    /**
+     * Checks validity of a move, makes a move
+     * @param from a rod number to remove a disc from
+     * @param to a rod number to add a disc too
+     * @return the AnswerModel telling us the current state of the game
+     */
     public AnswerModel makeMove(int from, int to) {
 
         if (victory) {
@@ -67,6 +86,11 @@ public class TowersService {
 
     }
 
+    /**
+     * Helper method for generating and returning AnswerModel
+     * @param s the message we want to display
+     * @return the AnswerModel telling us the current state of the game
+     */
     private AnswerModel generateAnswer(String s) {
         AnswerModel ret = new AnswerModel();
         ret.setMessage(s);
@@ -74,13 +98,21 @@ public class TowersService {
         return ret;
     }
 
-
+    /**
+     * Helper method, populates the rod with pegs. For starting rod only (sorted)
+     * @param pegs number of discs/pegs
+     */
     private void populate(int pegs) {
         for (int t = pegs - 1; t >= 0; t--) {
             towersModel.getRod(0).getStack().push(t);
         }
     }
 
+    /**
+     * Helper, populates game with Rods
+     * @param pegs how many pegs we have in a game
+     * @param rods how many rods we have in a game
+     */
     private void addNewRods(int pegs, int rods) {
         for (int t = 0; t < rods; t++) {
             RodModel rodModel = new RodModel();

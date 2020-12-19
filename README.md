@@ -1,6 +1,6 @@
 # Hanoi Engine as REST API
 
-## Rules
+## Rules of the Game
 This code is a simple representation of the towers of Hanoi game.
 The game setup consists of having rods and pegs (or discs) that fit on the rod. 
 The goal of the game is to move the stack of pegs (or discs) from initial to a final rod while having the same sorting of the pegs as the result.
@@ -15,6 +15,20 @@ The programing language of choice is Java. The framework of choice is called Nin
 
 ## Installing and Running
 For the purpose of this document, a new and a fresh Linux has been placed into a Virtual Machine. The version is Linux Mint linuxmint-20-cinnamon-64bit.
+
+sudo apt-get update
+
+sudo apt-get install openjdk-11-jdk -y
+
+sudo apt-get install maven -y
+
+sudo apt-get install git -y
+
+git clone https://github.com/olejardamir/Hanoi.git
+
+cd Hanoi/
+
+mvn clean install
 
 
 ## Engine design

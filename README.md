@@ -116,9 +116,47 @@ For this game, we only need one data structure. Stack is the data structure that
 We have used strictly the MVC pattern offered by the framework, while re-routing the view into a JSON output. Furthermore, we have used a Singleton for the game object and Dependency Injection to loosely couple the game and make it user-connection specific. The framework patterns were strictly followed, without complicating things further. Therefore, we are using the Controller and Service for executing the game and control the Models, with JSON as the view.
 
 ### Code Architecture
+For more details about each code's function, please see the commented code (JavaDoc)
 We are separating the architecture to Models, Services and Controllers
 
 <img src="https://raw.githubusercontent.com/olejardamir/Hanoi/main/architecture.png">
+
+#### Models
+The models are: AnswerModel, TowersModel, and RodsModel.
+- AnswerModel tells us the current status message (returned as JSON when move is made) as well as the state of all rods with pegs
+- TowersModel is the model of the Henoi towers, with rods and pegs. We also mark the final rod (where the victory happens).
+- Rod model is the model of a single rod with pegs. We also mark whether it is the final rod or not.
+
+### Services
+The services are: TowersService and RodService
+- TowersService helps us maintain the rods with RodService, makes the move, and helps us setup the game (towers)
+- RodService helps us maintain the single rod with pegs
+
+### Controller
+The controller is: HanoiController with two main methods: newGame and playGame.
+- newGame initiates the game based on input parameters
+- playGame makes the move for us based on the current state and the input parameters.
+
+### List of Files
+All files that this project is made up of are:
+
+src/main:
+-conf/Routes.java
+-controller/HanoiController.java
+-models/AnswerModel.java
+-models/RodModel.java
+-models/TowersModel.java
+-service/RodService.java
+-service/TowersService.java
+
+test:
+-views/ApplicationController/HanoiAPITest.java
+-views/ApplicationController/HanoiServiceTest.java
+
+## Routing
+Instead of sending a JSON and converting it to POJO, we are using a simpler approach. We are using the URI to mark the moves or the new game parameters, while sending a NULL object with the POST request. This simplifies the code and an approach.
+
+
 
 
 

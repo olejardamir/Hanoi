@@ -27,6 +27,7 @@ public class TowersService {
         rodService = new RodService();
         towersModel = new TowersModel();
         finalRod = rods - 1;
+        towersModel.setFinalRod(finalRod);
         addNewRods(pegs, rods);
         towersModel.getRod(finalRod).setFinalRod(true);
         populate(pegs);

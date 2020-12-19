@@ -45,7 +45,7 @@ Open a new console tab and execute, for example:
 curl -X POST http://localhost:8080/newGame/1/2/
 
 Result will be:
-''
+```JSON
 {
   "message": "New game started",
   "currentState": {
@@ -68,7 +68,7 @@ Result will be:
     "finalRod": 0
   }
 }
-''
+```
 
 ## Engine design
 ### Logic

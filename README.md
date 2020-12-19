@@ -11,8 +11,8 @@ The rules of the game are:
 - no disc to be placed on top of a smaller disc
 
 ## Technology stack
-The programing language of choice is Java. The framework of choice is called Ninja Framework. Ninja was used for its simplicity, representing a Swiss-army knife of the RESTful microservices. Simplicity is its power, and it was chosen instead of the popular frameworks such as Spring-boot (although the logic is the same). Furthermore, there was no need to use any databaess, and all POJOs are loosely coupled and existing for the session. Within the Ninja Framework, the server is Jetty, dependency injection and singletons are Google classes, while JUnit was used for the test-cases. The connection management and everything else is done by Ninja Framework. All requests are POST requests to HTTP at localhost:8080. For manual testing, you may use CURL or POSTMAN.
+The programing language of choice is Java. The framework of choice is called Ninja Framework. Ninja was used for its simplicity, representing a Swiss-army knife of the RESTful microservices. Simplicity is its power, and it was chosen instead of the popular frameworks such as Spring-boot (although the logic is the same). Furthermore, there was no need to use any databaess, and all POJOs are loosely coupled, existing only for the session. The connection management and everything else is done by Ninja Framework. No filters or session data is used. Server is Jetty, dependency injection and singletons are Google classes, while JUnit was used for the test-cases. All requests are POST requests to HTTP at localhost:8080. For manual testing, you may use CURL or POSTMAN.
 
-## Installing
+## Installing and Running
 For the purpose of this document, a new and a fresh Linux has been placed into a Virtual Machine. The version is Linux Mint linuxmint-20-cinnamon-64bit.
 

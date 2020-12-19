@@ -141,17 +141,17 @@ The controller is: HanoiController with two main methods: newGame and playGame.
 All files that this project is made up of are:
 
 src/main:
--conf/Routes.java
--controller/HanoiController.java
--models/AnswerModel.java
--models/RodModel.java
--models/TowersModel.java
--service/RodService.java
--service/TowersService.java
+- conf/Routes.java
+- controller/HanoiController.java
+- models/AnswerModel.java
+- models/RodModel.java
+- models/TowersModel.java
+- service/RodService.java
+- service/TowersService.java
 
 test:
--views/ApplicationController/HanoiAPITest.java
--views/ApplicationController/HanoiServiceTest.java
+- views/ApplicationController/HanoiAPITest.java
+- views/ApplicationController/HanoiServiceTest.java
 
 ## Routing
 Instead of sending a JSON and converting it to POJO, we are using a simpler approach. We are using the URI to mark the moves or the new game parameters, while sending a NULL object with the POST request. This simplifies the code and an approach.

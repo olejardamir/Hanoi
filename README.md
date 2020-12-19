@@ -29,4 +29,7 @@ The pegs are represented by a number, starting from 0. Higher the number, larger
 - We cannot remove from an empty rod.
 - We cannot place on top of the smaller peg.
 
+### Data Structures
+For this game, we only need one data structure. Stack is the data structure that functions according to a FIFO (First-in, First-out) principle. The stack functions that we need are peek (for verifying the move), push (for placing a peg on the rod), and pop (for removing a peg).
+
 

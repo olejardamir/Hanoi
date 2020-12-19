@@ -30,7 +30,7 @@ The pegs are represented by a number, starting from 0. Higher the number, larger
 - We cannot place on top of the smaller peg.
 
 ### Data Structures
-For this game, we only need one data structure. Stack is the data structure that functions according to a FIFO (First-in, First-out) principle. The stack functions that we need are peek (for verifying the move), push (for placing a peg on the rod), and pop (for removing a peg). However, we have also used a Queue (as a cloned Stack) to confirm the victory, that is, if all pegs are sorted.
+For this game, we only need one data structure. Stack is the data structure that functions according to a FIFO (First-in, First-out) principle. The stack functions that we need are peek (for verifying the move), push (for placing a peg on the rod), and pop (for removing a peg). However, we have also used a Queue (as a cloned Stack, since code is cleaner) to confirm the victory, that is, if all pegs are sorted.
 
 ### Design Patterns
 We have used strictly the MVC pattern offered by the framework, while re-routing the view into a JSON output. Furthermore, we have used a Singleton for the game object and Dependency Injection to loosely couple the game and make it user-connection specific. The framework patterns were strictly followed, without complicating things further. Therefore, we are using the Controller and Service for executing the game and control the Models, with JSON as the view.

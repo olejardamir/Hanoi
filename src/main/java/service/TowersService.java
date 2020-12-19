@@ -34,6 +34,9 @@ public class TowersService {
         return generateAnswer("New game started");
     }
 
+    public TowersModel getTowersModel() {
+        return towersModel;
+    }
 
     public AnswerModel makeMove(int from, int to) {
 

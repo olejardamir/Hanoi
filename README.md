@@ -25,4 +25,8 @@ Although we were told that the game engine should support 4 pegs, it does not sa
 - We can have two or more rods. 
 - If we have two rods, then the number of pegs must be 1, otherwise, it can be any number.
 
-The pegs are represented by a number, starting from 0. Higher the number, larger the peg. 
+The pegs are represented by a number, starting from 0. Higher the number, larger the peg. While moving the upermost peg from one rod to another (one by one), the rules of the game become:
+- We cannot remove from an empty rod.
+- We cannot place on top of the smaller peg.
+
+

@@ -30,6 +30,45 @@ cd Hanoi/
 
 mvn clean install
 
+### Testing
+
+mvn test
+
+You should see "Tests run: 8, Failures: 0, Errors: 0, Skipped: 0"
+
+### Manual Running or Testing
+
+mvn ninja:run
+
+Open a new console tab and execute, for example:
+
+curl -X POST http://localhost:8080/newGame/1/2/
+
+Result will be:
+''
+{
+  "message": "New game started",
+  "currentState": {
+    "rods": [
+      {
+        "totalPegs": 1,
+        "rodNumber": 0,
+        "stack": [
+          0
+        ],
+        "finalRod": false
+      },
+      {
+        "totalPegs": 1,
+        "rodNumber": 1,
+        "stack": [],
+        "finalRod": true
+      }
+    ],
+    "finalRod": 0
+  }
+}
+''
 
 ## Engine design
 ### Logic

@@ -118,5 +118,8 @@ We have used strictly the MVC pattern offered by the framework, while re-routing
 ### Code Architecture
 We are separating the architecture to Models, Services and Controllers
 
+<img src="https://raw.githubusercontent.com/olejardamir/Hanoi/main/architecture.png">
+
+
 
 

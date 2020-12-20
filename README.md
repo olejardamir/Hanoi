@@ -99,7 +99,7 @@ curl -X POST http://localhost:8080/playGame/0/1/
 ## Engine design
 ### Logic
 Although we were told that the game engine should support 4 pegs, it does not say that it should not support any other number of rods or pegs. Therefore, the universal Henoi tower engine was made. Having the universal engine implies several constraints. 
-- We cannot have empty rods. 
+- We cannot have all empty rods. 
 - The minimum number of pegs is 1. 
 - We can have two or more rods. 
 - If we have two rods, then the number of pegs must be 1, otherwise, it can be any number.
